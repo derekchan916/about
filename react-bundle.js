@@ -55,7 +55,7 @@
 	        return React.createElement(
 	            'div',
 	            null,
-	            'Hello World'
+	            'Hello World!!'
 	        );
 	    }
 	});
