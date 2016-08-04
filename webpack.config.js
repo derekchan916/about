@@ -1,6 +1,6 @@
 module.exports = {
     context: __dirname,
-    entry: "./family.jsx",
+    entry: "./app/index.jsx",
     output: {
         path: "./",
         filename: "react-bundle.js"

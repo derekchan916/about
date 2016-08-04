@@ -1,6 +1,7 @@
 node_modules
 .tmp
+.tmp
+.sass-cache
 .DS_Store
-app/scripts/react-bundle.js
-app/scripts/react-bundle.map
+react-bundle.js
 npm-debug.log
