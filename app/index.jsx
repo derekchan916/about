@@ -1,7 +1,6 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-
-import './index.scss';
+import './stylesheets/_styleguide.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 var MyComponent = React.createClass({
     render() {

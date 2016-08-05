@@ -46,15 +46,22 @@
 
 	'use strict';
 	
-	__webpack_require__(1);
+	__webpack_require__(181);
 	
-	var React = __webpack_require__(5);
-	var ReactDOM = __webpack_require__(39);
+	var _react = __webpack_require__(5);
 	
-	var MyComponent = React.createClass({
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(39);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var MyComponent = _react2.default.createClass({
 	    displayName: 'MyComponent',
 	    render: function render() {
-	        return React.createElement(
+	        return _react2.default.createElement(
 	            'div',
 	            { className: 'Index' },
 	            'Hello World'
@@ -63,50 +70,12 @@
 	});
 	
 	document.addEventListener("DOMContentLoaded", function () {
-	    ReactDOM.render(React.createElement(MyComponent, null), document.getElementById('main'));
+	    _reactDom2.default.render(_react2.default.createElement(MyComponent, null), document.getElementById('main'));
 	});
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(2);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./index.scss", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./index.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".Index {\n  font-size: 14px;\n  background-color: blue; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
+/* 1 */,
+/* 2 */,
 /* 3 */
 /***/ function(module, exports) {
 
@@ -21791,6 +21760,48 @@
 	var ReactMount = __webpack_require__(171);
 	
 	module.exports = ReactMount.renderSubtreeIntoContainer;
+
+/***/ },
+/* 179 */,
+/* 180 */,
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(182);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./_styleguide.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./_styleguide.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".Index {\n  background-color: blue; }\n", ""]);
+	
+	// exports
+
 
 /***/ }
 /******/ ]);
