@@ -1,10 +1,12 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
+import './index.scss';
+
 var MyComponent = React.createClass({
     render() {
         return(
-            <div>Hello World!!</div>
+            <div className="Index">Hello World</div>
         );
     }
 });
