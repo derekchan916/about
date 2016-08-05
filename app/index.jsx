@@ -1,15 +1,23 @@
+'use strict';
+
 import './stylesheets/_styleguide.scss';
-import React from 'react';
+import React, {
+	Component
+} from 'react';
 import ReactDOM from 'react-dom';
 
-var MyComponent = React.createClass({
-    render() {
-        return(
-            <div className="Index">Hello World</div>
-        );
-    }
-});
+import Header from './Main/Header';
+
+class Index extends Component {
+	render () {
+		return (
+			<div>
+				<Header />
+			</div>
+		)
+	}
+}
 
 document.addEventListener("DOMContentLoaded", () => {
-    ReactDOM.render(<MyComponent />, document.getElementById('main'));
+    ReactDOM.render(<Index />, document.getElementById('main'));
 });
