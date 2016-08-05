@@ -21822,7 +21822,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".Styleguide {\n  font-family: Comfortaa; }\n", ""]);
+	exports.push([module.id, ".Styleguide {\n  font-family: Comfortaa; }\n  .Styleguide h1 {\n    display: inline;\n    font-size: 22px; }\n", ""]);
 	
 	// exports
 
@@ -21874,18 +21874,18 @@
 						'div',
 						{ className: 'Header__Tabs' },
 						_react2.default.createElement(
-							'span',
-							null,
+							'h1',
+							{ className: 'Header__Tabs--child' },
 							'Haylie'
 						),
 						_react2.default.createElement(
-							'span',
-							null,
+							'h1',
+							{ className: 'Header__Tabs--child' },
 							'Chan'
 						),
 						_react2.default.createElement(
-							'span',
-							null,
+							'h1',
+							{ className: 'Header__Tabs--child' },
 							'About'
 						)
 					)
@@ -21933,7 +21933,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".Header__Container {\n  display: flex;\n  height: 100px;\n  background-color: blue; }\n\n.Header__Logo {\n  background-image: url(\"/app/src/Main/Logo.svg\"); }\n", ""]);
+	exports.push([module.id, ".Header__Container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 40px;\n  height: 80px;\n  font-weight: bold; }\n\n.Header__Logo {\n  background-image: url(\"/app/src/Main/Logo.svg\");\n  width: 100%; }\n\n.Header__Tabs--child {\n  margin: 0 20px; }\n  .Header__Tabs--child:hover {\n    cursor: pointer; }\n", ""]);
 	
 	// exports
 

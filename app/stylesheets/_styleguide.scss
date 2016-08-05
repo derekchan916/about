@@ -1,3 +1,10 @@
+@import './_main.scss';
+
 .Styleguide {
 	font-family: Comfortaa;
+
+	h1 {
+		display: inline;
+		font-size: $font-size-h1;
+	}
 }
