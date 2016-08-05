@@ -7,7 +7,7 @@ import React, {
 class Header extends Component {
 	render () {
 		return (
-			<div>My Header!</div>
+			<div>My Header</div>
 		)
 	}
 }

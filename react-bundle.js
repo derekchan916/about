@@ -58,7 +58,7 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _Header = __webpack_require__(183);
+	var _Header = __webpack_require__(184);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
@@ -84,7 +84,7 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ className: 'Styleguide' },
 					_react2.default.createElement(_Header2.default, null)
 				);
 			}
@@ -21822,13 +21822,14 @@
 	
 	
 	// module
-	exports.push([module.id, ".Index {\n  background-color: blue; }\n", ""]);
+	exports.push([module.id, ".Styleguide {\n  font-family: Comfortaa; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 183 */
+/* 183 */,
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21866,7 +21867,7 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					'My Header!'
+					'My Header'
 				);
 			}
 		}]);

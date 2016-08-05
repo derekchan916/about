@@ -6,12 +6,12 @@ import React, {
 } from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from './Main/Header';
+import Header from './src/Main/Header';
 
 class Index extends Component {
 	render () {
 		return (
-			<div>
+			<div className="Styleguide">
 				<Header />
 			</div>
 		)
