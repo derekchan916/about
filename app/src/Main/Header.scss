@@ -1,0 +1,14 @@
+@import '../../stylesheets/_main.scss';
+
+.Header {
+
+	&__Container {
+		display: flex;
+		height: 100px;
+		background-color: blue;
+	}
+
+	&__Logo {
+		background-image: url('/app/src/Main/Logo.svg');
+	}
+}

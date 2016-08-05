@@ -21840,6 +21840,8 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
+	__webpack_require__(185);
+	
 	var _react = __webpack_require__(5);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -21866,8 +21868,27 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
-					'My Header'
+					{ className: 'Header__Container' },
+					_react2.default.createElement('div', { className: 'Header__Logo' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'Header__Tabs' },
+						_react2.default.createElement(
+							'span',
+							null,
+							'Haylie'
+						),
+						_react2.default.createElement(
+							'span',
+							null,
+							'Chan'
+						),
+						_react2.default.createElement(
+							'span',
+							null,
+							'About'
+						)
+					)
 				);
 			}
 		}]);
@@ -21876,6 +21897,46 @@
 	}(_react.Component);
 	
 	exports.default = Header;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(186);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./Header.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./Header.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".Header__Container {\n  display: flex;\n  height: 100px;\n  background-color: blue; }\n\n.Header__Logo {\n  background-image: url(\"/app/src/Main/Logo.svg\"); }\n", ""]);
+	
+	// exports
+
 
 /***/ }
 /******/ ]);
