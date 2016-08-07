@@ -137,7 +137,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".Styleguide {\n  font-family: Comfortaa; }\n  .Styleguide h1 {\n    display: inline;\n    font-size: 22px; }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 700;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Bold.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 500;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Regular.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 300;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Light.ttf\") format(\"truetype\"); }\n\n.Styleguide {\n  font-family: Comfortaa; }\n  .Styleguide h1 {\n    display: inline;\n    font-size: 22px; }\n", ""]);
 	
 	// exports
 
@@ -22079,6 +22079,9 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	// Component from https://github.com/eiriklv/react-masonry-component
+	
 	
 	var Masonry = function (_Component) {
 		_inherits(Masonry, _Component);

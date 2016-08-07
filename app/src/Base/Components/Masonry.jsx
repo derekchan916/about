@@ -5,6 +5,7 @@ import React, {
 	Component
 } from 'react';
 
+// Component from https://github.com/eiriklv/react-masonry-component
 import MasonryComponent from 'react-masonry-component';
 
 class Masonry extends Component {
