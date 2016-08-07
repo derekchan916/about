@@ -10,6 +10,8 @@
 	&__Container {
 		display: flex;
 		flex: 0 1 700px;
+		justify-content: space-around;
+		
 		margin: 0 $gutter-large;
 		flex-wrap: wrap;
 	}

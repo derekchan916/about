@@ -22040,7 +22040,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".Content__Wrapper {\n  display: flex;\n  justify-content: center; }\n\n.Content__Container {\n  display: flex;\n  flex: 0 1 700px;\n  margin: 0 20px;\n  flex-wrap: wrap; }\n\n.Content__Avatar {\n  background-size: 100%;\n  width: 150px;\n  height: 150px;\n  margin: 10px; }\n", ""]);
+	exports.push([module.id, ".Content__Wrapper {\n  display: flex;\n  justify-content: center; }\n\n.Content__Container {\n  display: flex;\n  flex: 0 1 700px;\n  justify-content: space-around;\n  margin: 0 20px;\n  flex-wrap: wrap; }\n\n.Content__Avatar {\n  background-size: 100%;\n  width: 150px;\n  height: 150px;\n  margin: 10px; }\n", ""]);
 	
 	// exports
 
