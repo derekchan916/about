@@ -5,6 +5,8 @@ import React, {
 	Component
 } from 'react';
 
+import Masonry from '../Base/Components/Masonry';
+
 const AVATARLINKS = [
 	'app/images/haylie-avatar.png',
 	'app/images/flora-avatar.png',
@@ -26,6 +28,7 @@ class Content extends Component {
 						</div>
 					))}
 				</div>
+				<Masonry />
 			</div>
 		)
 	}
