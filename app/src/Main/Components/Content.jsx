@@ -5,7 +5,7 @@ import React, {
 	Component
 } from 'react';
 
-import Masonry from '../Base/Components/Masonry';
+import Masonry from '../../Base/Components/Masonry';
 
 const AVATARLINKS = [
 	'app/images/haylie-avatar.png',

@@ -6,8 +6,8 @@ import React, {
 } from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from './src/Main/Header';
-import Content from './src/Main/Content';
+import Header from './src/Main/Components/Header';
+import Content from './src/Main/Components/Content';
 
 class Index extends Component {
 	render () {
