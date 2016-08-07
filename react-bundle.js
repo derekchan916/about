@@ -21968,7 +21968,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var AVATARS = [];
+	var AVATARLINKS = ['app/images/haylie-avatar.png', 'app/images/flora-avatar.png', 'app/images/lorena-avatar.png', 'app/images/derek-avatar.png'];
 	
 	var Content = function (_Component) {
 		_inherits(Content, _Component);
@@ -21988,7 +21988,13 @@
 					_react2.default.createElement(
 						'div',
 						{ className: 'Content__Container' },
-						_react2.default.createElement('div', { className: 'Content__Avatar' })
+						AVATARLINKS.map(function (avatarLink, index) {
+							return _react2.default.createElement('div', {
+								key: index,
+								className: 'Content__Avatar',
+								style: { backgroundImage: 'url(' + avatarLink + ')' }
+							});
+						})
 					)
 				);
 			}
@@ -22034,7 +22040,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".Content__Wrapper {\n  display: flex;\n  justify-content: center; }\n\n.Content__Container {\n  display: flex;\n  flex: 0 1 700px;\n  margin: 0 20px;\n  flex-wrap: wrap; }\n", ""]);
+	exports.push([module.id, ".Content__Wrapper {\n  display: flex;\n  justify-content: center; }\n\n.Content__Container {\n  display: flex;\n  flex: 0 1 700px;\n  margin: 0 20px;\n  flex-wrap: wrap; }\n\n.Content__Avatar {\n  background-size: 100%;\n  width: 150px;\n  height: 150px;\n  margin: 10px; }\n", ""]);
 	
 	// exports
 
