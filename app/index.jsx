@@ -6,15 +6,22 @@ import React, {
 } from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from './src/Main/Components/Header';
 import Content from './src/Main/Components/Content';
 
 class Index extends Component {
+	constructor (props) {
+		super(props);
+		this.state = {
+			currentPage: 'Home'
+		}
+	}
+
 	render () {
 		return (
 			<div className="Styleguide">
-				<Header />
-				<Content />
+				<Content
+					currentPage={this.state.currentPage}
+					/>
 			</div>
 		)
 	}

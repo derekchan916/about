@@ -2,7 +2,8 @@
 
 import './Content.scss';
 import React, {
-	Component
+	Component,
+	PropTypes
 } from 'react';
 
 import Masonry from '../../Base/Components/Masonry';
@@ -15,7 +16,16 @@ const AVATARLINKS = [
 ]
 
 class Content extends Component {
+	constructor (props) {
+		super(props);
+		this.state = {
+			sideView: false
+		}
+	}
+
 	render () {
+		const viewStyle = this.state.sideView ? 'sideView' : '';
+		
 		return (
 			<div className="Content__Wrapper">
 				<div className="Content__Container">
@@ -24,6 +34,7 @@ class Content extends Component {
 							key={index}
 							className="Content__Avatar"
 							style={{backgroundImage:'url(' + avatarLink + ')'}}
+							onClick={() => this.onAvatarClick()}
 							>
 						</div>
 					))}
@@ -32,6 +43,14 @@ class Content extends Component {
 			</div>
 		)
 	}
+
+	onAvatarClick () {
+		this.setState({sideView: true});
+	}
+}
+
+Content.propTypes = {
+	currentPage : PropTypes.string,
 }
 
 export default Content;

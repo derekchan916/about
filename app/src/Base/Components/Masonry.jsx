@@ -24,7 +24,7 @@ class Masonry extends Component {
 	componentWillMount () {
 		var arr = [];
 
-		for (var i = 1; i < ImageCount; i++) {
+		for (var i = 1; i <= ImageCount; i++) {
 			arr.push(i);
 		}
 
@@ -40,6 +40,8 @@ class Masonry extends Component {
 	}
 
 	render () {
+		return null;
+		
 		const windowWidth = this.state.windowWidth;
 		const displayStyle = !this.state.imagesLoaded ? 'none' : 'inline-block';
 		var imageWidth;

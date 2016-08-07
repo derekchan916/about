@@ -22,5 +22,9 @@
 		width: 150px;
 		height: 150px;
 		margin: $gutter;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
