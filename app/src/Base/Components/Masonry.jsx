@@ -5,20 +5,23 @@ import React, {
 	Component
 } from 'react';
 
+import MasonryComponent from 'react-masonry-component';
+
 class Masonry extends Component {
 	constructor(props) {
 		super (props);
 		this.state = {
-			imagesArr: []
+			imagesArr: [],
+			imagesLoaded: false,
 		}
 	}
 
 	componentWillMount() {
 		var arr = [];
 
-		for (var i=0; i<10; i++) {
+		for (var i = 0; i < 10; i++) {
 			arr.push({
-				'width': getRandomSize(200, 400),
+				'width': getRandomSize(300, 300),
 				'height': getRandomSize(200, 400),
 			});
 		}
@@ -27,18 +30,34 @@ class Masonry extends Component {
 	}
 
 	render () {
-		return (
-			<div className="Masonry__Container">
+		var displayStyle = !this.state.imagesLoaded ? 'none' : 'inline-block';
+
+        return (
+			<MasonryComponent
+				className={'Masonry__Container'}
+				elementType={'ul'}
+				options={{transitionDuration: 0}}
+				disableImagesLoaded={false}
+				updateOnEachImageLoad={false}
+				style={{display: displayStyle}}
+				onImagesLoaded={() => this.handleImagesLoaded()}
+				>
 				{this.state.imagesArr.map((img, index) => (
-					<img
-						className="Masonry__Photos"
-						key={index}
-						src={'http://placekitten.com/'+img.width+'/'+img.height}
-						alt="pretty kitty"
-						/>
+					<li key={index}>
+						<img
+							src={'http://placekitten.com/'+img.width+'/'+img.height}
+							alt="pretty kitty"
+							/>
+					</li>
 				))}
-			</div>
-		)
+			</MasonryComponent>
+        );
+    }
+
+	handleImagesLoaded () {
+		if (!this.state.imagesLoaded) {
+			this.setState({imagesLoaded: true});
+		}
 	}
 }
 
