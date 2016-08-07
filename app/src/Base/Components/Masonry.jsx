@@ -5,15 +5,17 @@ import React, {
 	Component
 } from 'react';
 
-// Component from https://github.com/eiriklv/react-masonry-component
-import MasonryComponent from 'react-masonry-component';
+import MasonryComponent from 'react-masonry-component'; // Component from https://github.com/eiriklv/react-masonry-component
+import _ from 'lodash';
 import Config from '../../Main/Config';
+
+const ImageCount = 7;
 
 class Masonry extends Component {
 	constructor(props) {
 		super (props);
 		this.state = {
-			imagesArr: [],
+			imageNums: [],
 			imagesLoaded: false,
 		}
 	}
@@ -21,11 +23,11 @@ class Masonry extends Component {
 	componentWillMount() {
 		var arr = [];
 
-		for (var i = 1; i < 7; i++) {
+		for (var i = 1; i < ImageCount; i++) {
 			arr.push(i);
 		}
 
-		this.setState({imgNums: arr});
+		this.setState({imageNums: _.shuffle(arr)});
 	}
 
 	render () {
@@ -40,11 +42,11 @@ class Masonry extends Component {
 				style={{display: displayStyle}}
 				onImagesLoaded={() => this.handleImagesLoaded()}
 				>
-				{this.state.imgNums.map((imgNum, index) => (
+				{this.state.imageNums.map((imageNum, index) => (
 					<img
 						key={index}
 						className="Masonry__Item"
-						src={'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_300/haylie-wu' + imgNum}
+						src={'http://res.cloudinary.com/' + Config.CLOUDINARY_NAME + '/image/upload/w_300/haylie-wu' + imageNum}
 						alt="pretty kitty"
 						/>
 				))}
