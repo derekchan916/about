@@ -6,3 +6,5 @@ node_modules
 npm-debug.log
 /.idea/
 .idea/workspace.xml
+react-bundle.js
+react-bundle.js.map
