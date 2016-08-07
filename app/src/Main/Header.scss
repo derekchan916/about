@@ -9,7 +9,7 @@
 
 	&__Container {
 		display: flex;
-		flex: 0 1 700px;
+		flex: 0 1 900px;
 		justify-content: space-between;
 		align-items: center;
 
@@ -20,15 +20,19 @@
 
 	&__Logo {
 		background-image: url('/app/images/Logo.svg');
+		background-repeat: no-repeat;
 		background-size: 100%;
 		width: 100px;
 		height: 100px;
 	}
 
 	&__Tabs {
+		display: flex;
+		flex: 0 1 350px;
+		justify-content: space-between;
 
 		&--child {
-			margin: 0 $gutter-large;
+			margin: 0 $gutter;
 
 			&:hover {
 				cursor: pointer;

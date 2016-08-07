@@ -21937,7 +21937,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".Header__Wrapper {\n  display: flex;\n  justify-content: center; }\n\n.Header__Container {\n  display: flex;\n  flex: 0 1 700px;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 40px;\n  height: 100px;\n  font-weight: bold; }\n\n.Header__Logo {\n  background-image: url(\"/app/images/Logo.svg\");\n  background-size: 100%;\n  width: 100px;\n  height: 100px; }\n\n.Header__Tabs--child {\n  margin: 0 20px; }\n  .Header__Tabs--child:hover {\n    cursor: pointer; }\n", ""]);
+	exports.push([module.id, ".Header__Wrapper {\n  display: flex;\n  justify-content: center; }\n\n.Header__Container {\n  display: flex;\n  flex: 0 1 900px;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 40px;\n  height: 100px;\n  font-weight: bold; }\n\n.Header__Logo {\n  background-image: url(\"/app/images/Logo.svg\");\n  background-repeat: no-repeat;\n  background-size: 100%;\n  width: 100px;\n  height: 100px; }\n\n.Header__Tabs {\n  display: flex;\n  flex: 0 1 350px;\n  justify-content: space-between; }\n  .Header__Tabs--child {\n    margin: 0 10px; }\n    .Header__Tabs--child:hover {\n      cursor: pointer; }\n", ""]);
 	
 	// exports
 
