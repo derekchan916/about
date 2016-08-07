@@ -2,19 +2,27 @@
 
 .Header {
 
+	&__Wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
 	&__Container {
 		display: flex;
+		flex: 0 1 700px;
 		justify-content: space-between;
 		align-items: center;
 
 		margin: 0 $gutter-extra-large;
-		height: 80px;
+		height: 100px;
 		font-weight: bold;
 	}
 
 	&__Logo {
-		background-image: url('/app/src/Main/Logo.svg');
-		width: 100%;
+		background-image: url('/app/images/Logo.svg');
+		background-size: 100%;
+		width: 100px;
+		height: 100px;
 	}
 
 	&__Tabs {
