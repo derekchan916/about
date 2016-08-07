@@ -1,0 +1,18 @@
+@import '../../stylesheets/_main.scss';
+
+.Content {
+
+	&__Wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__Container {
+		display: flex;
+		flex: 0 1 700px;
+		margin: 0 $gutter-large;
+		flex-wrap: wrap;
+	}
+
+	
+}

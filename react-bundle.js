@@ -21968,6 +21968,8 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	var AVATARS = [];
+	
 	var Content = function (_Component) {
 		_inherits(Content, _Component);
 	
@@ -21982,8 +21984,12 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
-					'hi!'
+					{ className: 'Content__Wrapper' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'Content__Container' },
+						_react2.default.createElement('div', { className: 'Content__Avatar' })
+					)
 				);
 			}
 		}]);
@@ -22028,7 +22034,7 @@
 	
 	
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".Content__Wrapper {\n  display: flex;\n  justify-content: center; }\n\n.Content__Container {\n  display: flex;\n  flex: 0 1 700px;\n  margin: 0 20px;\n  flex-wrap: wrap; }\n", ""]);
 	
 	// exports
 
