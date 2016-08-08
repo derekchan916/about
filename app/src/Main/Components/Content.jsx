@@ -19,20 +19,22 @@ class Content extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			sideView: false
+			sideView: false,
+			disable: false,
 		}
 	}
 
 	render () {
-		const viewStyle = this.state.sideView ? 'sideView' : '';
-		
+		const viewStyle = this.state.sideView ? 'sideContent ' : 'mainContent ';
+		const viewDisable = this.state.disable ? 'Disable' : '';
+
 		return (
-			<div className="Content__Wrapper">
-				<div className="Content__Container">
+			<div className={"Content__Wrapper " + viewStyle}>
+				<div className={"Content__Container " + viewStyle}>
 					{AVATARLINKS.map((avatarLink, index) => (
 						<div
 							key={index}
-							className="Content__Avatar"
+							className={"Content__Avatar " + viewStyle + viewDisable}
 							style={{backgroundImage:'url(' + avatarLink + ')'}}
 							onClick={() => this.onAvatarClick()}
 							>
@@ -45,7 +47,13 @@ class Content extends Component {
 	}
 
 	onAvatarClick () {
-		this.setState({sideView: true});
+		this.setState({disable: true});
+		setTimeout(() => {
+			this.setState({
+				sideView: !this.state.sideView,
+				disable: false,
+			})
+		}, 100);
 	}
 }
 

@@ -139,7 +139,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 700;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Bold.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 500;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Regular.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 300;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Light.ttf\") format(\"truetype\"); }\n\n.Styleguide {\n  font-family: Comfortaa; }\n  .Styleguide h1 {\n    display: inline;\n    font-size: 22px; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 700;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Bold.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 500;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Regular.ttf\") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Comfortaa';\n  font-weight: 300;\n  src: url(\"/app/stylesheets/fonts/Comfortaa-Light.ttf\") format(\"truetype\"); }\n\n.Styleguide {\n  font-family: Comfortaa; }\n  .Styleguide h1 {\n    display: inline;\n    font-size: 22px; }\n", ""]);
 	
 	// exports
 
@@ -21871,7 +21871,8 @@
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Content).call(this, props));
 	
 			_this.state = {
-				sideView: false
+				sideView: false,
+				disable: false
 			};
 			return _this;
 		}
@@ -21881,18 +21882,19 @@
 			value: function render() {
 				var _this2 = this;
 	
-				var viewStyle = this.state.sideView ? 'sideView' : '';
+				var viewStyle = this.state.sideView ? 'sideContent ' : 'mainContent ';
+				var viewDisable = this.state.disable ? 'Disable' : '';
 	
 				return _react2.default.createElement(
 					'div',
-					{ className: 'Content__Wrapper' },
+					{ className: "Content__Wrapper " + viewStyle },
 					_react2.default.createElement(
 						'div',
-						{ className: 'Content__Container' },
+						{ className: "Content__Container " + viewStyle },
 						AVATARLINKS.map(function (avatarLink, index) {
 							return _react2.default.createElement('div', {
 								key: index,
-								className: 'Content__Avatar',
+								className: "Content__Avatar " + viewStyle + viewDisable,
 								style: { backgroundImage: 'url(' + avatarLink + ')' },
 								onClick: function onClick() {
 									return _this2.onAvatarClick();
@@ -21906,7 +21908,15 @@
 		}, {
 			key: 'onAvatarClick',
 			value: function onAvatarClick() {
-				this.setState({ sideView: true });
+				var _this3 = this;
+	
+				this.setState({ disable: true });
+				setTimeout(function () {
+					_this3.setState({
+						sideView: !_this3.state.sideView,
+						disable: false
+					});
+				}, 100);
 			}
 		}]);
 	
@@ -21954,7 +21964,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".Content__Wrapper {\n  display: flex;\n  align-items: center;\n  flex-direction: column; }\n\n.Content__Container {\n  display: flex;\n  max-width: 700px;\n  justify-content: space-around;\n  margin: 0 20px;\n  flex-wrap: wrap; }\n\n.Content__Avatar {\n  background-size: 100%;\n  width: 150px;\n  height: 150px;\n  margin: 10px; }\n  .Content__Avatar:hover {\n    cursor: pointer; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n.Content__Wrapper {\n  display: flex;\n  flex-direction: column; }\n  .Content__Wrapper.mainContent {\n    align-items: center; }\n  .Content__Wrapper.sideContent {\n    align-items: flex-start; }\n\n.Content__Container {\n  display: flex;\n  justify-content: space-around; }\n  .Content__Container.mainContent {\n    flex-wrap: wrap;\n    max-width: 700px;\n    margin: 0 20px; }\n  .Content__Container.sideContent {\n    flex-direction: column; }\n\n.Content__Avatar {\n  background-size: 100%;\n  margin: 10px; }\n  .Content__Avatar.mainContent {\n    width: 150px;\n    height: 150px; }\n  .Content__Avatar.sideContent {\n    width: 60px;\n    height: 60px; }\n  .Content__Avatar:nth-child(1) {\n    animation-fill-mode: forwards;\n    animation: popIn 0.3s;\n    -webkit-animation: popIn 0.3s;\n    -moz-animation: popIn 0.3s;\n    -ms-animation: popIn 0.3s; }\n  .Content__Avatar:nth-child(2) {\n    animation-fill-mode: forwards;\n    animation: popIn 0.6s;\n    -webkit-animation: popIn 0.6s;\n    -moz-animation: popIn 0.6s;\n    -ms-animation: popIn 0.6s; }\n  .Content__Avatar:nth-child(3) {\n    animation-fill-mode: forwards;\n    animation: popIn 0.9s;\n    -webkit-animation: popIn 0.9s;\n    -moz-animation: popIn 0.9s;\n    -ms-animation: popIn 0.9s; }\n  .Content__Avatar:nth-child(4) {\n    animation-fill-mode: forwards;\n    animation: popIn 1.2s;\n    -webkit-animation: popIn 1.2s;\n    -moz-animation: popIn 1.2s;\n    -ms-animation: popIn 1.2s; }\n  .Content__Avatar.Disable {\n    animation-fill-mode: forwards;\n    animation: popOut 0.2s;\n    -webkit-animation: popOut 0.2s;\n    -moz-animation: popOut 0.2s;\n    -ms-animation: popOut 0.2s; }\n  .Content__Avatar:hover {\n    cursor: pointer; }\n", ""]);
 	
 	// exports
 
@@ -22149,7 +22159,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".Masonry__Container {\n  width: 320px; }\n  @media (min-width: 568px) {\n    .Masonry__Container {\n      width: 568px; } }\n  @media (min-width: 768px) {\n    .Masonry__Container {\n      width: 768px; } }\n  @media (min-width: 960px) {\n    .Masonry__Container {\n      width: 960px; } }\n  @media (min-width: 1200px) {\n    .Masonry__Container {\n      width: 1200px; } }\n\n.Masonry__Item {\n  margin: 5px; }\n", ""]);
+	exports.push([module.id, "@keyframes popIn {\n  0% {\n    opacity: 0;\n    transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    transform: scale(1); } }\n\n@-webkit-keyframes popIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -webkit-transform: scale(1); } }\n\n@-moz-keyframes popIn {\n  0% {\n    opacity: 0;\n    -moz-transform: scale(0.1); }\n  100% {\n    opacity: 1;\n    -moz-transform: scale(1); } }\n\n@keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-webkit-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n@-moz-keyframes popOut {\n  0% {\n    opacity: 1;\n    transform: scale(1); }\n  100% {\n    opacity: 0;\n    transform: scale(0.1); } }\n\n.Masonry__Container {\n  width: 320px; }\n  @media (min-width: 568px) {\n    .Masonry__Container {\n      width: 568px; } }\n  @media (min-width: 768px) {\n    .Masonry__Container {\n      width: 768px; } }\n  @media (min-width: 960px) {\n    .Masonry__Container {\n      width: 960px; } }\n  @media (min-width: 1200px) {\n    .Masonry__Container {\n      width: 1200px; } }\n\n.Masonry__Item {\n  margin: 5px; }\n", ""]);
 	
 	// exports
 

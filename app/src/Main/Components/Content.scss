@@ -4,24 +4,63 @@
 
 	&__Wrapper {
 		display: flex;
-		align-items: center;
 		flex-direction: column;
+
+		&.mainContent {
+			align-items: center;
+		}
+
+		&.sideContent {
+			align-items: flex-start;
+		}
 	}
 
 	&__Container {
 		display: flex;
-		max-width: 700px;
 		justify-content: space-around;
 
-		margin: 0 $gutter-large;
-		flex-wrap: wrap;
+		&.mainContent {
+			flex-wrap: wrap;
+			max-width: 700px;
+			margin: 0 $gutter-large;
+		}
+
+		&.sideContent {
+			flex-direction: column;
+		}
 	}
+
 
 	&__Avatar {
 		background-size: 100%;
-		width: 150px;
-		height: 150px;
 		margin: $gutter;
+
+		&.mainContent {
+			width: 150px;
+			height: 150px;
+		}
+
+		&.sideContent {
+			width: 60px;
+			height: 60px;
+		}
+
+		&:nth-child(1) {
+			@include popIn(0.3s);
+		}
+		&:nth-child(2) {
+			@include popIn(0.6s);
+		}
+		&:nth-child(3) {
+			@include popIn(0.9s);
+		}
+		&:nth-child(4) {
+			@include popIn(1.2s);
+		}
+
+		&.Disable {
+			@include popOut(0.2s);
+		}
 
 		&:hover {
 			cursor: pointer;
