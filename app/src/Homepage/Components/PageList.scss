@@ -1,0 +1,52 @@
+@import '../../../stylesheets/_main.scss';
+
+.PageList {
+
+	&__Wrapper {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-top: $gutter-extra-large*2;
+	}
+
+	&__Container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 700px;
+		margin: 0 $gutter-large;
+
+		// Transform puts this container in its own rendering layer - Nick
+		transform: translateZ(0);
+	}
+
+
+	&__Avatar {
+		background-size: 100%;
+		margin: $gutter;
+		width: 150px;
+		height: 150px;
+
+		// We could create a setTimeout to change the state on each item class but this way is much faster.
+		&:nth-child(1) {
+			@include animate(popIn, 0.3s);
+		}
+		&:nth-child(2) {
+			@include animate(popIn, 0.6s);
+		}
+		&:nth-child(3) {
+			@include animate(popIn, 0.9s);
+		}
+		&:nth-child(4) {
+			@include animate(popIn, 1.2s);
+		}
+
+		&.Disable {
+			@include animate(popOut, 0.2s);
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+@import '../../../stylesheets/_main.scss';
+
+.Content {
+
+	&__Wrapper {
+		border-left: 1px solid #cccccc;
+
+		&.animate {
+			@include animate(fadeIn, 1s, 0.5s);
+		}
+	}
+}
